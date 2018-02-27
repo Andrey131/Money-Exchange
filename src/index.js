@@ -6,11 +6,11 @@ var Q=0;
 var D=0;
 var N=0;
 var P=0;
-var currencyR;
+var currencyR=0;;
 var result = new Object();
 
 if (currency>10000)	
-{
+{ 
 		result.error="You are rich, my friend! We don't have so much coins for exchange";
 		return result;
 }
@@ -22,31 +22,31 @@ if (currency<=0)
 
 currencyR=currency;
 
-while(currencyR>50)
+while(currencyR>=50)
 {
 	currencyR=currencyR-50;
 	H++;
 } 
 
-while(currencyR>25)
+while(currencyR>=25)
 {
 	currencyR=currencyR-25;
 	Q++;
 }
 
-while(currencyR>10)
+while(currencyR>=10)
 {
-	currency=currencyR-10;
+	currencyR=currencyR-10;
 	D++;
 }
 
-while(currencyR>5)
+while(currencyR>=5)
 {
 	currencyR=currencyR-5;
 	N++;
 }
 
-while(currencyR>1)
+while(currencyR>0)
 {
 	currencyR=currencyR-1;
 	P++;
